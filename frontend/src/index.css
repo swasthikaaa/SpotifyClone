@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #1DB954;
+    --black: #121212;
+    --dark-gray: #1a1a1a;
+    --light-gray: #2a2a2a;
+    --text-gray: #a7a7a7;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: black;
+    color: var(--white);
+    overflow: hidden;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-flex {
+    display: flex;
+    height: 90%;
+}
+
+.display-area {
+    flex: 1;
+    background: linear-gradient(#121212, #121212);
+    border-radius: 8px;
+    margin: 8px 8px 0 0;
+    overflow-y: auto;
+    background-color: var(--black);
+}
+
+.bottom-nav {
+    display: none !important;
+    /* Hidden by default on desktop */
+}
+
+/* Utility Classes */
+.hidden-mobile {
+    display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none !important;
+    }
+
+    .main-flex {
+        height: calc(100% - 130px);
+        /* Adjust for Player + Bottom Nav */
+    }
+
+    .display-area {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .bottom-nav {
+        display: flex !important;
+    }
+
+    .hidden-mobile {
+        display: none !important;
+    }
+
+    .hover-bg:hover {
+        background-color: transparent !important;
+        /* Disable hover effects on touch */
+    }
+
+    /* Profile Page Mobile */
+    .profile-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Subscription Page Mobile */
+    .hero-banner {
+        height: auto !important;
+        padding: 40px 20px !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Album/Playlist Header Mobile */
+    .content-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* Song List Grid Mobile */
+    .song-grid {
+        grid-template-columns: 1fr 50px !important;
+    }
+
+    .song-grid-album,
+    .song-grid-date {
+        display: none !important;
+    }
+
+    .responsive-title {
+        font-size: 32px !important;
+        text-align: center;
+    }
+
+    .responsive-input {
+        font-size: 24px !important;
+        text-align: center;
+        width: 100% !important;
+    }
+}
