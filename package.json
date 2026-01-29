@@ -2,12 +2,21 @@
     "name": "spotify-clone",
     "version": "1.0.0",
     "scripts": {
-        "build": "npm install --prefix frontend && npm run build --prefix frontend"
+        "build": "cd frontend && npm install && ./node_modules/.bin/vite build"
     },
     "dependencies": {
         "cors": "^2.8.6",
         "dotenv": "^17.2.3",
         "express": "^5.2.1",
-        "mongoose": "^9.1.5"
+        "mongoose": "^9.1.5",
+        "axios": "^1.13.3",
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0",
+        "react-icons": "^5.5.0",
+        "react-router-dom": "^7.13.0"
+    },
+    "devDependencies": {
+        "vite": "^7.2.4",
+        "@vitejs/plugin-react": "^5.1.1"
     }
 }
