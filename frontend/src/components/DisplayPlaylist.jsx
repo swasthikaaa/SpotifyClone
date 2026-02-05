@@ -121,7 +121,7 @@ const DisplayPlaylist = () => {
                     <div style={{ position: 'relative' }}>
                         <BsThreeDots size={30} color='#a7a7a7' style={{ cursor: 'pointer' }} onClick={() => setShowMenu(!showMenu)} />
                         {showMenu && (
-                            <div style={{ position: 'absolute', top: '100%', left: '0', backgroundColor: '#282828', borderRadius: '4px', padding: '5px', borderRadius: '4px', zIndex: 10, minWidth: '150px', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
+                            <div style={{ position: 'absolute', top: '100%', left: '0', backgroundColor: '#282828', borderRadius: '4px', padding: '5px', zIndex: 10, minWidth: '150px', boxShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
                                 <div onClick={() => {
                                     document.getElementById('search-songs').scrollIntoView({ behavior: 'smooth' });
                                     setShowMenu(false);
